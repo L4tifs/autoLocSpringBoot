@@ -3,6 +3,8 @@ package tn.esprit.autoloc.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -26,4 +28,10 @@ public class Agence {
 
     @Column(nullable = false, length = 20)
     private String telephone;
+
+    @OneToMany(mappedBy = "agence")
+    private List<Employe> employes;
+
+    @OneToMany(mappedBy = "agence")
+    private List<Vehicule> vehicules;
 }
