@@ -1,7 +1,8 @@
-package tn.esprit.autoloc.Entities;
+package tn.esprit.autoloc.Domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import tn.esprit.autoloc.Domain.Contrat;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

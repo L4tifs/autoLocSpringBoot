@@ -1,4 +1,4 @@
-package tn.esprit.autoloc.Entities;
+package tn.esprit.autoloc.Domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,13 +10,12 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
 public class Contrat {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContrat;
 
     @Column(nullable = false)

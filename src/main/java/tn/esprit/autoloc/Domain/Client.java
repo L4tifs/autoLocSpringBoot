@@ -1,21 +1,20 @@
-package tn.esprit.autoloc.Entities;
+package tn.esprit.autoloc.Domain;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idClient;
 
     @Column(nullable = false, length = 50)
@@ -36,6 +35,7 @@ public class Client {
     @Column(nullable = false)
     private LocalDate dateInscription;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "client")
-    private List<Reservation> reservations;
+    private Set<Reservation> reservation;
 }

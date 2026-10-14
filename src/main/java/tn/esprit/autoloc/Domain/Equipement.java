@@ -1,4 +1,4 @@
-package tn.esprit.autoloc.Entities;
+package tn.esprit.autoloc.Domain;
 
 import jakarta.persistence.*;
 import lombok.*;
