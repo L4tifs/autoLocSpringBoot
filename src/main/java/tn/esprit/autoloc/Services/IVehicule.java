@@ -9,4 +9,9 @@ public interface IVehicule {
     void deleteVehicule(Long id);
     List<Vehicule> getAllVehicules();
     Vehicule getVehiculeById(Long id);
+    Vehicule affecterVehicule(Long idVehicule, Long idAgence);
+
+    Vehicule affecterEquipement(Long idVehicule, Long idEquipement);
+
+    Vehicule desaffecterEquipement(Long idVehicule, Long idEquipement);
 }

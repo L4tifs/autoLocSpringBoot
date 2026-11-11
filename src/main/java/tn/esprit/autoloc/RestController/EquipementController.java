@@ -1,18 +1,21 @@
 package tn.esprit.autoloc.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.Domain.Equipement;
 import tn.esprit.autoloc.Services.IEquipement;
 
 import java.util.List;
-
+@Tag(name="gestion equipment")
 @RestController
 @RequestMapping("/api/equipements")
 @AllArgsConstructor
 public class EquipementController {
 
     private final IEquipement equipementService;
+    @Operation(description = "ajouter equipment")
 
     @PostMapping
     public Equipement addEquipement(@RequestBody Equipement equipement) {

@@ -9,4 +9,7 @@ public interface IEmploye {
     void deleteEmploye(Long id);
     List<Employe> getAllEmployes();
     Employe getEmployeById(Long id);
+    Employe desaffecterEmploye(Long idEmploye);
+
+    Employe affecterEmploye(Long idEmploye, Long idAgence);
 }

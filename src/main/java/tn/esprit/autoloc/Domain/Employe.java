@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,6 +27,8 @@ public class Employe {
     private RoleEmploye role;
 
     @ManyToOne
-    @JoinColumn(name = "id_agence", nullable = false)
+    @JsonIgnore
+
+    @JoinColumn(name = "id_agence", nullable = true)
     private Agence agence;
 }

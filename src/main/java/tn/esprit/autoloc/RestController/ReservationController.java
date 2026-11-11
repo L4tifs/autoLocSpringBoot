@@ -1,18 +1,21 @@
 package tn.esprit.autoloc.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.Domain.Reservation;
 import tn.esprit.autoloc.Services.IReservation;
 
 import java.util.List;
-
+@Tag(name="reservation")
 @RestController
 @RequestMapping("/api/reservations")
 @AllArgsConstructor
 public class ReservationController {
 
     private final IReservation reservationService;
+    @Operation(description = "ajouter Reservation")
 
     @PostMapping
     public Reservation addReservation(@RequestBody Reservation reservation) {

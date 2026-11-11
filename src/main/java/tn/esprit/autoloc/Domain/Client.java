@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -37,5 +38,6 @@ public class Client {
 
     @ToString.Exclude
     @OneToMany(mappedBy = "client")
+    @JsonIgnore
     private Set<Reservation> reservation;
 }
